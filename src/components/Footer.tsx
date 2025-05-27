@@ -115,10 +115,10 @@ export default function Footer() {
             <p className="text-stone-300 leading-relaxed">
               Your trusted partner for premium timber solutions. Specializing in heavy timbers and custom milling with over 25 years of experience.
             </p>
-            <div className="bg-stone-800/50 rounded-lg p-4 border border-stone-700">
-              <p className="text-amber-400 font-semibold mb-2">GSTN</p>
-              <p className="text-stone-300 text-sm font-mono">36AAFFT8892A1ZX</p>
-            </div>
+            {/* <div className="bg-stone-800/50 rounded-lg p-4 border border-stone-700"> */}
+              {/* <p className="text-amber-400 font-semibold mb-2">GSTN</p>
+              <p className="text-stone-300 text-sm font-mono">36AAFFT8892A1ZX</p> */}
+            {/* </div> */}
             <div className="flex space-x-4">
               {navigation.social.map((item) => (
                 <a
