@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mittal Timbers Website
+
+A modern, professional website for Mittal Timbers, a premium timber wood product supplier. Built with Next.js and Tailwind CSS.
+
+## Features
+
+- Modern, responsive design
+- Product catalog with detailed category pages
+- Service showcase
+- Company information and history
+- Contact form
+- Image gallery
+- SEO-friendly structure
+
+## Tech Stack
+
+- **Framework:** Next.js 14
+- **Styling:** Tailwind CSS
+- **Icons:** Heroicons
+- **Animations:** Framer Motion
+- **TypeScript:** For type safety
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/mittal-timbers.git
+   cd mittal-timbers
+   ```
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+mittal-timbers/
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   ├── contact/
+│   │   ├── gallery/
+│   │   ├── products/
+│   │   ├── services/
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   └── globals.css
+│   ├── components/
+│   │   ├── Navigation.tsx
+│   │   └── Footer.tsx
+│   └── lib/
+├── public/
+│   └── images/
+├── package.json
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Home:** Landing page with featured products and company highlights
+- **About:** Company history, mission, and values
+- **Products:** Comprehensive product catalog
+- **Services:** Company services and expertise
+- **Gallery:** Product and project showcase
+- **Contact:** Contact form and information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Development
 
-## Learn More
+### Adding New Products
 
-To learn more about Next.js, take a look at the following resources:
+1. Add product information to the `productCategories` object in `src/app/products/[category]/page.tsx`
+2. Add product images to the `public/images` directory
+3. Update the navigation and product listings as needed
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Styling
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The project uses Tailwind CSS for styling. Custom styles can be added in `src/app/globals.css`.
 
-## Deploy on Vercel
+### Images
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Place all images in the `public/images` directory. Use the following structure:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+public/
+└── images/
+    ├── gallery/
+    ├── products/
+    └── hero/
+```
+
+## Deployment
+
+The project can be deployed to any platform that supports Next.js applications, such as Vercel, Netlify, or a custom server.
+
+### Build
+
+```bash
+npm run build
+```
+
+### Production
+
+```bash
+npm start
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Contact
+
+For any questions or concerns, please contact the project maintainers.
