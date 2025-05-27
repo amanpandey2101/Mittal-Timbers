@@ -45,7 +45,7 @@ const services = [
   },
   {
     name: 'SAW MILLING',
-    description: 'We at Mittal Timbers use cutting edge machinery to cater to the need of our clients. This includes various vertical and horizontal saw machines and carpentry machines.',
+    description: 'We at Timber India use cutting edge machinery to cater to the need of our clients. This includes various vertical and horizontal saw machines and carpentry machines.',
     icon: WrenchScrewdriverIcon,
   },
   {
@@ -85,7 +85,7 @@ export default function Home() {
               WE <span className="text-gradient bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">LISTEN</span>
             </h1>
             <p className="text-xl md:text-2xl text-stone-200 max-w-4xl mx-auto mb-8 leading-relaxed">
-              At Mittal Timbers, we put our customers at the heart of everything we do. We listen 
+              At Timber India, we put our customers at the heart of everything we do. We listen 
               and respond to their needs as we constantly strive to provide an intuitive and 
               memorable experience when using our products and interacting with us.
             </p>
@@ -122,10 +122,10 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-left">
               <h2 className="text-base font-semibold text-amber-600 tracking-wide uppercase">About</h2>
-              <h3 className="text-4xl font-bold text-stone-900 mt-2 mb-6">Mittal Timbers</h3>
+              <h3 className="text-4xl font-bold text-stone-900 mt-2 mb-6">TIMBER INDIA</h3>
               <div className="space-y-6 text-stone-600 leading-relaxed">
                 <p>
-                  Mittal Timbers specializes in heavy timbers and custom milling. We are creative, 
+                  Timber India specializes in heavy timbers and custom milling. We are creative, 
                   our sawyers and planers and fabricators can make almost anything out of 
                   wood. We can cut and mill the entire order and package it for you.
                 </p>

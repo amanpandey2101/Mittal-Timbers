@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation'
+import Link from 'next/link'
 
 const productCategories = {
   'teak-wood': {
@@ -49,8 +50,9 @@ const productCategories = {
   // Add more product categories here
 }
 
-export default function ProductCategory({ params }: { params: { category: string } }) {
-  const product = productCategories[params.category as keyof typeof productCategories]
+export default async function ProductCategory({ params }: { params: Promise<{ category: string }> }) {
+  const { category } = await params
+  const product = productCategories[category as keyof typeof productCategories]
 
   if (!product) {
     notFound()
@@ -134,15 +136,15 @@ export default function ProductCategory({ params }: { params: { category: string
             Contact us to learn more about our {product.name.toLowerCase()} products and how they can benefit your project.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <Link
               href="/contact"
               className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               Contact Us
-            </a>
-            <a href="/products" className="text-sm font-semibold leading-6 text-gray-900">
+            </Link>
+            <Link href="/products" className="text-sm font-semibold leading-6 text-gray-900">
               View All Products <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

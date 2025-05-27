@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react';
 import Link from 'next/link';
-import { Bars3Icon, XMarkIcon, ChevronDownIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { HomeIcon, BuildingOfficeIcon, CubeIcon, WrenchScrewdriverIcon, PhotoIcon, PhoneIcon } from '@heroicons/react/24/solid';
 
 const navigation = {
@@ -62,7 +62,6 @@ const navigation = {
 
 export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [productsMenuOpen, setProductsMenuOpen] = useState(false);
 
   return (
     <nav className="bg-white/95 backdrop-blur-md border-b border-stone-200 sticky top-0 z-50 shadow-sm">

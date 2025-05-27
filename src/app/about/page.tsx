@@ -66,7 +66,7 @@ export default function About() {
               </dt>
               <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
                 <p className="flex-auto">
-                  We prioritize our customers' needs, providing expert guidance and support to help them find the
+                  We prioritize our customers&apos; needs, providing expert guidance and support to help them find the
                   perfect timber solutions for their projects.
                 </p>
               </dd>
