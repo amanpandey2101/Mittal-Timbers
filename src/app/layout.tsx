@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Mittal Timbers - Premium Timber Wood Products",
     description: "Your trusted supplier of high-quality timber wood products. Specializing in heavy timbers and custom milling since 1998.",
-    url: "https://timberindia.in",
+    url: "https://mittaltimbertraders.in",
     siteName: "Mittal Timbers",
     type: "website",
     locale: "en_IN",

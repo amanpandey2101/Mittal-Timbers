@@ -72,7 +72,7 @@ const contactInfo = [
   {
     icon: EnvelopeIcon,
     label: 'Email',
-    value: 'sales@timberindia.in',
+    value: 'sales@mittaltimbertraders.in',
   },
   {
     icon: MapPinIcon,

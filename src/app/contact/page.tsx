@@ -13,8 +13,8 @@ const contactInfo = [
   {
     icon: EnvelopeIcon,
     label: 'Email',
-    value: 'sales@timberindia.in',
-    href: 'mailto:sales@timberindia.in',
+    value: 'sales@mittaltimbertraders.in',
+    href: 'mailto:sales@mittaltimbertraders.in',
   },
   {
     icon: MapPinIcon,
