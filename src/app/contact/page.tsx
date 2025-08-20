@@ -1,7 +1,6 @@
 'use client'
-import { useState } from 'react';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon, BuildingOfficeIcon } from '@heroicons/react/24/outline';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+
 
 const contactInfo = [
   {
@@ -31,36 +30,36 @@ const contactInfo = [
 ];
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // const [formData, setFormData] = useState({
+  //   name: '',
+  //   email: '',
+  //   phone: '',
+  //   message: '',
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = async (e: React.FormEvent) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', phone: '', message: '' });
-    
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
-  };
+  //   await new Promise(resolve => setTimeout(resolve, 1000));
+    
+  //   setIsSubmitting(false);
+  //   setIsSubmitted(true);
+  //   setFormData({ name: '', email: '', phone: '', message: '' });
+    
+
+  //   setTimeout(() => setIsSubmitted(false), 5000);
+  // };
+
+  // const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  //   setFormData(prev => ({
+  //     ...prev,
+  //     [e.target.name]: e.target.value
+  //   }));
+  // };
 
   return (
     <div className="bg-white">
@@ -78,7 +77,7 @@ export default function Contact() {
             <div className="inline-flex items-center bg-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-8">
               <span className="text-amber-400 font-bold text-sm tracking-wider">GET IN TOUCH</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
               CONTACT <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">US</span>
             </h1>
             <p className="text-xl md:text-2xl text-stone-200 max-w-4xl mx-auto leading-relaxed">
@@ -102,7 +101,7 @@ export default function Contact() {
               const Icon = item.icon;
               return (
                 <div key={item.label} className={`animate-fade-in-up animate-delay-${(index + 1) * 100}`}>
-                  <div className="bg-white rounded-3xl p-10 shadow-xl hover:shadow-2xl transition-all duration-500 hover-lift text-center border border-stone-100 hover:border-amber-200 relative overflow-hidden group">
+                  <div className="bg-white rounded-2xl p-8 w-full align-middle shadow-xl hover:shadow-2xl transition-all duration-500 hover-lift text-center border border-stone-100 hover:border-amber-200 relative overflow-hidden group">
                     <div className="absolute inset-0 bg-gradient-to-br from-amber-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative">
                       <div className="w-20 h-20 bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 rounded-3xl flex items-center justify-center mx-auto mb-8 shadow-xl group-hover:scale-110 transition-transform duration-300">
@@ -112,7 +111,7 @@ export default function Contact() {
                       {item.href ? (
                         <a 
                           href={item.href}
-                          className="text-stone-600 hover:text-amber-600 transition-colors leading-relaxed block text-lg"
+                          className="text-stone-600 hover:text-amber-600 transition-colors block text-md"
                           target={item.href.startsWith('http') ? '_blank' : undefined}
                           rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                         >
@@ -142,8 +141,8 @@ export default function Contact() {
         </div>
       </div>
 
-      {/* Contact Form Section */}
-      <div className="py-32 bg-white relative overflow-hidden">
+ 
+      {/* <div className="py-32 bg-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" 
              style={{
                backgroundImage: `url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23D2691E" fill-opacity="0.1"><circle cx="30" cy="30" r="3"/></g></svg>')`,
@@ -153,7 +152,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
             
-            {/* Left Column - Company Info */}
+
             <div className="space-y-8 animate-fade-in-left">
               <div>
                 <div className="inline-flex items-center bg-amber-100 rounded-full px-4 py-2 mb-6">
@@ -202,7 +201,7 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Right Column - Contact Form */}
+         
             <div className="animate-fade-in-right">
               <div className="bg-white rounded-3xl shadow-2xl p-10 border border-stone-200 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-50/30 to-transparent"></div>
@@ -293,7 +292,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Map Section */}
       <div className="bg-gradient-to-br from-stone-100 via-stone-50 to-stone-100 py-24 relative overflow-hidden">
@@ -312,7 +311,7 @@ export default function Contact() {
             <p className="text-xl text-stone-600">Visit our depot in Secunderabad, Telangana</p>
           </div>
           <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-stone-200 animate-fade-in-up">
-            <div className="aspect-[16/9] bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 flex items-center justify-center relative">
+            <div className="aspect-[16/9] py-10 bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 flex items-center justify-center relative">
               <div className="absolute inset-0 opacity-20" 
                    style={{
                      backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><pattern id="mapWood" patternUnits="userSpaceOnUse" width="80" height="40"><path d="M0,20 Q20,5 40,20 T80,20" stroke="%23A0522D" stroke-width="0.5" fill="none" opacity="0.4"/></pattern></defs><rect fill="url(%23mapWood)" width="400" height="300"/></svg>')`,
@@ -322,7 +321,7 @@ export default function Contact() {
                 <div className="w-24 h-24 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
                   <MapPinIcon className="w-12 h-12 text-white" />
                 </div>
-                <p className="text-stone-700 font-bold text-xl mb-2">Interactive Map</p>
+                {/* <p className="text-stone-700 font-bold text-xl mb-2">Interactive Map</p> */}
                 <p className="text-stone-600 text-lg mb-6">Bunglow No. 179, NH-44, Medchal Road</p>
                 <a 
                   href="https://maps.google.com/?q=Bunglow+No.+179+NH-44+Medchal+Road+Secunderabad"
