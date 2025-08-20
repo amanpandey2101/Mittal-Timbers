@@ -109,11 +109,11 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-2xl font-bold text-white tracking-tight">Mittal Timbers</span>
-                <span className="text-xs text-amber-400 font-medium tracking-wider">ESTD 1998</span>
+                <span className="text-xs text-amber-400 font-bold tracking-wider">SINCE 1995</span>
               </div>
             </Link>
             <p className="text-stone-300 leading-relaxed">
-              Your trusted partner for premium timber solutions. Specializing in heavy timbers and custom milling with over 25 years of experience.
+              Your trusted partner for premium timber solutions. Where wood meets luxury - specializing in heavy timbers and custom milling with over 29 years of experience.
             </p>
             {/* <div className="bg-stone-800/50 rounded-lg p-4 border border-stone-700"> */}
               {/* <p className="text-amber-400 font-semibold mb-2">GSTN</p>

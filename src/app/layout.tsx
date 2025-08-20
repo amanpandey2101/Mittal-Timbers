@@ -17,15 +17,15 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Mittal Timbers - Premium Timber Wood Products | Estd 1998",
-  description: "Your trusted supplier of high-quality timber wood products including teak wood, hardwood, door frames, and custom milling services. Serving customers since 1998.",
-  keywords: "timber, wood, teak wood, hardwood, door frames, custom milling, lumber, construction materials, furniture wood",
+  title: "Mittal Timbers - Premium Timber Wood Products | Since 1995",
+  description: "Your trusted supplier of high-quality timber wood products including teak wood, hardwood, door frames, and custom milling services. Where wood meets luxury since 1995.",
+  keywords: "timber, wood, teak wood, hardwood, door frames, custom milling, lumber, construction materials, furniture wood, luxury wood products",
   authors: [{ name: "Mittal Timbers" }],
   creator: "Mittal Timbers",
   publisher: "Mittal Timbers",
   openGraph: {
-    title: "Mittal Timbers - Premium Timber Wood Products",
-    description: "Your trusted supplier of high-quality timber wood products. Specializing in heavy timbers and custom milling since 1998.",
+    title: "Mittal Timbers - Where Wood Meets Luxury",
+    description: "A one stop solution for all wooden work. Experience premium timber products and professional craftsmanship since 1995.",
     url: "https://mittaltimbertraders.in",
     siteName: "Mittal Timbers",
     type: "website",
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mittal Timbers - Premium Timber Wood Products",
-    description: "Your trusted supplier of high-quality timber wood products. Specializing in heavy timbers and custom milling since 1998.",
+    title: "Mittal Timbers - Where Wood Meets Luxury",
+    description: "A one stop solution for all wooden work. Experience premium timber products and professional craftsmanship since 1995.",
   },
   robots: {
     index: true,
@@ -58,11 +58,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <body className={`${inter.className} antialiased`}>
-        <div className="min-h-screen flex flex-col">
+    <html lang="en" className={`${inter.variable} ${playfair.variable} scroll-smooth`}>
+      <body className={`${inter.className} antialiased bg-white text-stone-900`}>
+        <div className="min-h-screen flex flex-col relative">
+          {/* Professional background texture */}
+          <div className="fixed inset-0 opacity-[0.02] pointer-events-none z-0" 
+               style={{
+                 backgroundImage: `url('data:image/svg+xml,<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="wood-bg" patternUnits="userSpaceOnUse" width="100" height="50"><path d="M0,25 Q25,5 50,25 T100,25" stroke="%23A0522D" stroke-width="0.3" fill="none" opacity="0.5"/><path d="M0,30 Q30,10 60,30 T100,30" stroke="%238B4513" stroke-width="0.2" fill="none" opacity="0.3"/></pattern></defs><rect fill="url(%23wood-bg)" width="200" height="200"/></svg>')`,
+               }}
+          />
           <Navigation />
-          <main className="flex-grow">
+          <main className="flex-grow relative z-10">
             {children}
           </main>
           <Footer />
