@@ -36,7 +36,7 @@ export default function NotFound() {
            </p>
           
           <div className="inline-flex items-center bg-amber-100 rounded-full px-6 py-2 mt-8">
-            <span className="text-amber-700 font-semibold text-sm tracking-wide">SINCE 1995 - WHERE WOOD MEETS LUXURY</span>
+            <span className="text-amber-700 font-semibold text-sm md:tracking-wide">SINCE 1995 - WHERE WOOD MEETS LUXURY</span>
           </div>
         </div>
         
