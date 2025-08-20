@@ -94,7 +94,7 @@ export default function Home() {
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
               WHERE <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">WOOD</span>
-              <br className="hidden sm:block" />
+              <br className="block" />
               MEETS <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">LUXURY</span>
             </h1>
             
