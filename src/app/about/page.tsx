@@ -1,5 +1,5 @@
 import { CheckCircleIcon, SparklesIcon, TrophyIcon, UserGroupIcon } from '@heroicons/react/24/solid';
-import { ClockIcon, GlobeAltIcon, CogIcon } from '@heroicons/react/24/outline';
+import { GlobeAltIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
 const values = [

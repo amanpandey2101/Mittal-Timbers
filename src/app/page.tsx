@@ -103,7 +103,7 @@ export default function Home() {
                 A one stop solution for all wooden work
               </p>
               <p className="text-lg md:text-xl text-stone-300 flex items-center justify-center gap-2">
-                Where you can experience all <span className="text-2xl">🪵</span> products
+                Where you can experience all Wood products
               </p>
             </div>
             
