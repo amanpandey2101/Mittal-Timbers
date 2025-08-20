@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 interface IconProps {
   className?: string;
@@ -100,17 +101,7 @@ export default function Footer() {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-8">
             <Link href="/" className="flex items-center space-x-3 group">
-              <div className="w-12 h-12 bg-gradient-to-br from-amber-600 to-amber-800 rounded-lg flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300">
-                <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7v10c0 5.55 3.84 9.739 9 11 5.16-1.261 9-5.45 9-11V7l-10-5z"/>
-                  <path d="M8 11h8v2H8z"/>
-                  <path d="M8 15h8v2H8z"/>
-                </svg>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-2xl font-bold text-white tracking-tight">Mittal Timbers</span>
-                <span className="text-xs text-amber-400 font-bold tracking-wider">SINCE 1995</span>
-              </div>
+              <Image src="/assets/logo2.png" alt="Mittal Timbers Logo" width={100} height={100} />
             </Link>
             <p className="text-stone-300 leading-relaxed">
               Your trusted partner for premium timber solutions. Where wood meets luxury - specializing in heavy timbers and custom milling with over 29 years of experience.
