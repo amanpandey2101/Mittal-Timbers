@@ -44,7 +44,7 @@ const achievements = [
 ];
 
 const milestones = [
-  { year: '1995', event: 'Company founded by T Y Rao with a vision to provide premium timber solutions' },
+  { year: '1995', event: 'Company founded by with a vision to provide premium timber solutions' },
   { year: '2000', event: 'Expanded operations and established our first major milling facility' },
   { year: '2005', event: 'Began international timber sourcing from 8+ countries' },
   { year: '2010', event: 'Introduced custom milling and fabrication services' },
@@ -70,18 +70,18 @@ export default function About() {
             <div className="inline-flex items-center bg-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-8">
               <span className="text-amber-400 font-bold text-sm tracking-wider">SINCE 1995</span>
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 tracking-tight leading-tight">
               ABOUT <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">US</span>
             </h1>
             <p className="text-xl md:text-2xl text-stone-200 max-w-4xl mx-auto leading-relaxed">
-              Your trusted partner for premium timber solutions - where wood meets luxury and craftsmanship meets innovation.
+              Mittal Timber Traders is a 25 year old trusted brand of the wooden solutions and building material industry.
             </p>
           </div>
         </div>
       </div>
 
-      {/* Company Story Section */}
-      <div className="py-32 bg-gradient-to-br from-white via-stone-50 to-white relative overflow-hidden">
+      {/* Company Story */}
+      <div className="py-24 bg-gradient-to-br from-white via-stone-50 to-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" 
              style={{
                backgroundImage: `url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23654321"><circle cx="20" cy="20" r="2"/><circle cx="80" cy="80" r="2"/></g></svg>')`,
@@ -89,45 +89,62 @@ export default function About() {
         />
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="animate-fade-in-left">
-              <div className="inline-flex items-center bg-amber-100 rounded-full px-4 py-2 mb-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in-up">
+              <div className="inline-flex items-center bg-amber-100 rounded-full px-6 py-2 mb-6">
                 <span className="text-amber-700 font-semibold text-sm tracking-wide">OUR STORY</span>
               </div>
-              <h2 className="text-5xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mb-8 leading-tight">
-                MITTAL TIMBERS
-              </h2>
-              <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
-                <p className="text-xl text-stone-700 font-medium">
-                  Founded in 1995, Mittal Timbers has grown from a small family business to one of the leading timber
-                  suppliers in the region. Our commitment to quality and customer satisfaction has been the cornerstone
-                  of our success.
-                </p>
-                <p>
-                  Over the years, we have expanded our product range and services while maintaining the highest standards
-                  of quality and reliability. Today, we serve customers across the country with a comprehensive range of
-                  timber products and solutions.
-                </p>
-                <p>
-                  Mittal Timbers specializes in heavy timbers and custom milling. We are creative, 
-                  our sawyers and planers and fabricators can make almost anything out of 
-                  wood. We can cut and mill the entire order and package it for you.
-                </p>
+              <h2 className="text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mb-8">25 Years of Wooden Excellence</h2>
+              <p className="text-lg text-stone-600 mb-6 leading-relaxed">
+                Mittal Timber Traders is a 25 year old trusted brand of the wooden solutions and building material industry. We provide a wide range of value added wood products such as indian & imported timbers, plywoods, laminates, veeners, facade materials, wooden floorings, readymade doors, mdf, hdhmr, hpl, block boards, flush doors, mouldings, panelings and other building material.
+              </p>
+              <p className="text-lg text-stone-600 mb-8 leading-relaxed">
+                Wood contributes to indoor air quality and provides a warm, inviting living environment. It brings the beauty of nature indoors, adding aesthetic values and offering limitless design options. Mittal Timber Traders is an excellent source for full range of wood species including Nagpur teak(c.p teak), sudan teak, ivory coast teak, champ wood, meranti wood, pine, white ash, steam beach, white oak, mahogany etc.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <div className="bg-gradient-to-r from-amber-600 to-amber-700 text-white px-6 py-3 rounded-xl font-bold">
+                  25+ Years Experience
+                </div>
+                <div className="bg-white border-2 border-amber-600 text-amber-700 px-6 py-3 rounded-xl font-bold hover:bg-amber-50 transition-colors">
+                  Premium Quality
+                </div>
               </div>
             </div>
-            
-            <div className="animate-fade-in-right">
-              <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 rounded-3xl shadow-2xl overflow-hidden border border-stone-200">
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-stone-800/10" />
-                  <div className="absolute inset-0 opacity-30" 
-                       style={{
-                         backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><pattern id="wood" patternUnits="userSpaceOnUse" width="80" height="40"><path d="M0,20 Q20,5 40,20 T80,20" stroke="%23A0522D" stroke-width="0.8" fill="none" opacity="0.6"/></pattern></defs><rect fill="url(%23wood)" width="400" height="300"/></svg>')`,
-                       }}
-                  />
-                  <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                    <p className="text-2xl font-bold text-stone-800 mb-1">T Y RAO</p>
-                    <p className="text-amber-600 font-semibold text-sm tracking-wide">(MANAGING DIRECTOR)</p>
+            <div className="relative animate-fade-in-up animation-delay-200">
+              <div className="relative bg-gradient-to-br from-amber-50 to-stone-100 rounded-3xl p-8 shadow-2xl border border-stone-200">
+                <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 to-transparent rounded-3xl"></div>
+                <div className="relative space-y-6">
+                  <div className="space-y-8">
+                    <div className="text-center">
+                      <div className="text-4xl font-bold text-amber-600 mb-2">1995</div>
+                      <p className="text-stone-600">Founded with Excellence</p>
+                    </div>
+                    
+                    <div className="border-t border-stone-200 pt-6">
+                      <h3 className="text-xl font-bold text-stone-800 mb-4">UNIQUE SELLING PRODUCTS (USP)</h3>
+                      <div className="space-y-3">
+                        <p className="text-stone-600 font-semibold">SPECIALIST IN:</p>
+                        <ul className="text-stone-600 space-y-1">
+                          <li>• NAGPUR TEAK</li>
+                          <li>• IVORY COAST</li>
+                          <li>• SUDAN</li>
+                          <li>• CHAMP</li>
+                          <li>• MERANTI</li>
+                          <li>• ALL KINDS OF PLYBOARD AND FLUSHDOORS</li>
+                          <li>• SUNMICA</li>
+                          <li>• VEENERS</li>
+                        </ul>
+                      </div>
+                    </div>
+                    
+                    <div className="border-t border-stone-200 pt-6">
+                      <h3 className="text-xl font-bold text-stone-800 mb-4">CHANNEL PARTNER</h3>
+                      <div className="space-y-2">
+                        <p className="text-stone-600">• FENESTA UPVC & ALUMINIUM</p>
+                        <p className="text-stone-600">• DOORS & WINDOWS</p>
+                        <p className="text-stone-600">• PREMIUM WOODEN DOORS</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

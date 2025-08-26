@@ -68,9 +68,9 @@ export default function Navigation() {
     <nav className="bg-white/98 backdrop-blur-xl border-b border-stone-200/80 sticky top-0 z-50 shadow-lg shadow-stone-900/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 
-        <div className="flex justify-center py-3">
+        <div className="flex justify-center py-2">
           <Link href="/" className="flex items-center space-x-4 group">
-            <Image src="/assets/logo.png" alt="Mittal Timbers Logo" width={100} height={100} />
+            <Image src="/assets/logo.png" alt="Mittal Timbers Logo" width={80} height={80} />
           </Link>
         </div>
 
@@ -95,7 +95,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button pinned right */}
-          <div className="lg:hidden absolute right-0 top-1/2 -translate-y-1/2">
+          <div className="lg:hidden absolute left-0 bottom-1/2 -translate-y-1/2">
             <button
               type="button"
               className="inline-flex items-center justify-center rounded-xl p-3 text-stone-600 hover:bg-gradient-to-r hover:from-amber-50 hover:to-amber-100 hover:text-amber-700 transition-all duration-300"

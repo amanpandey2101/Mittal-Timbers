@@ -4,28 +4,26 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react
 
 const contactInfo = [
   {
-    icon: PhoneIcon,
     label: 'Phone',
-    value: '+91 9177172277, +91 9848871244',
-    href: 'tel:+919177172277',
+    value: '+91 9318483152\n+91 9811424164',
+    href: 'tel:+919318483152',
+    icon: PhoneIcon,
   },
   {
-    icon: EnvelopeIcon,
     label: 'Email',
-    value: 'sales@mittaltimbertraders.in',
-    href: 'mailto:sales@mittaltimbertraders.in',
+    value: 'contact@mittaltimbers.com',
+    href: 'mailto:contact@mittaltimbers.com',
+    icon: EnvelopeIcon,
   },
   {
-    icon: MapPinIcon,
     label: 'Address',
-    value: 'Bunglow No. 179, NH-44, Medchal Road, Near Cantonment Check Post, Old Bowenpally, Secunderabad, Telangana, 500011',
-    href: 'https://maps.google.com/?q=Bunglow+No.+179+NH-44+Medchal+Road+Secunderabad',
+    value: 'H-36/27 DLF PHASE-1\nGURGAON\nMITTAL TIMBER TRADERS',
+    icon: MapPinIcon,
   },
   {
-    icon: ClockIcon,
     label: 'Business Hours',
-    value: 'Monday - Saturday: 9:30 AM - 6:00 PM\nSunday: Closed',
-    href: null,
+    value: 'Mon - Sat: 9:00 AM - 7:00 PM\nSun: 10:00 AM - 5:00 PM',
+    icon: ClockIcon,
   },
 ];
 
@@ -81,7 +79,7 @@ export default function Contact() {
               CONTACT <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">US</span>
             </h1>
             <p className="text-lg md:text-xl lg:text-2xl text-stone-200 max-w-4xl mx-auto leading-relaxed px-4">
-              Our depot is located in the heart of Hyderabad city. Experience premium timber solutions since 1995.
+              Our depot is located in DLF Phase-1, Gurgaon. Experience premium timber solutions since 1995.
             </p>
           </div>
         </div>
@@ -104,7 +102,7 @@ export default function Contact() {
                 <div className="text-center mb-8 md:mb-12">
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-stone-900 mb-3 md:mb-4">Get In Touch</h2>
                   <p className="text-base md:text-lg text-stone-600 max-w-2xl mx-auto px-2">
-                    Ready to discuss your timber requirements? Contact us through any of the channels below.
+                    Dear customers, We have a wide range of wood varieties having specialisation in NAGPUR TEAK, plywood, flush door, frames, veeners etc. Contact us through any of the channels below.
                   </p>
                 </div>
                 
@@ -335,33 +333,20 @@ export default function Contact() {
               <span className="text-amber-700 font-semibold text-xs md:text-sm tracking-wide">VISIT US</span>
             </div>
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mb-4 md:mb-6">Find Us</h3>
-            <p className="text-lg md:text-xl text-stone-600 px-4">Visit our depot in Secunderabad, Telangana</p>
+            <p className="text-lg md:text-xl text-stone-600 px-4">Visit our depot in DLF Phase-1, Gurgaon</p>
           </div>
           <div className="bg-white rounded-2xl md:rounded-3xl shadow-xl md:shadow-2xl overflow-hidden border border-stone-200 animate-fade-in-up">
-            <div className="aspect-[16/9] py-6 md:py-8 lg:py-10 bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 flex items-center justify-center relative">
-              <div className="absolute inset-0 opacity-20" 
-                   style={{
-                     backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><pattern id="mapWood" patternUnits="userSpaceOnUse" width="80" height="40"><path d="M0,20 Q20,5 40,20 T80,20" stroke="%23A0522D" stroke-width="0.5" fill="none" opacity="0.4"/></pattern></defs><rect fill="url(%23mapWood)" width="400" height="300"/></svg>')`,
-                   }}
+            <div className="w-full">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.993357956337!2d77.09308867668105!3d28.479746675748384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d192b8779c2b5%3A0xf3c154d91072aac8!2sMittal%20Timber%20Traders!5e0!3m2!1sen!2sin!4v1756046321796!5m2!1sen!2sin"
+                width="100%" 
+                height="450" 
+                style={{border: 0}} 
+                allowFullScreen={true}
+                loading="lazy" 
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-96 md:h-[450px]"
               />
-              <div className="text-center relative z-10">
-                <div className="w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 bg-gradient-to-br from-amber-600 to-amber-700 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6 shadow-xl md:shadow-2xl">
-                  <MapPinIcon className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 text-white" />
-                </div>
-                {/* <p className="text-stone-700 font-bold text-xl mb-2">Interactive Map</p> */}
-                <p className="text-stone-600 text-sm md:text-lg mb-4 md:mb-6 px-4">Bunglow No. 179, NH-44, Medchal Road</p>
-                <a 
-                  href="https://maps.google.com/?q=Bunglow+No.+179+NH-44+Medchal+Road+Secunderabad"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center bg-gradient-to-r from-amber-600 to-amber-700 text-white px-6 py-3 md:px-8 md:py-4 rounded-xl font-bold hover:from-amber-700 hover:to-amber-800 transition-all duration-300 shadow-lg hover:shadow-xl text-sm md:text-base"
-                >
-                  Open in Google Maps
-                  <svg className="w-4 h-4 md:w-5 md:h-5 ml-2 md:ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-              </div>
             </div>
           </div>
         </div>

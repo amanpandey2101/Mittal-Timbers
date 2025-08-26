@@ -68,12 +68,12 @@ const contactInfo = [
   {
     icon: PhoneIcon,
     label: 'Phone',
-    value: '+91 9177172277, +91 9848871244',
+    value: '+91 9318483152, +91 9811424164',
   },
   {
     icon: EnvelopeIcon,
     label: 'Email',
-    value: 'sales@mittaltimbertraders.in',
+    value: 'mittaltimber@gmail.com',
   },
   {
     icon: MapPinIcon,

@@ -10,21 +10,33 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
-    "framer-motion": "^12.14.0",
+    "framer-motion": "^12.23.12",
+    "lightgallery": "2.9.0-beta.1",
     "next": "15.3.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-intersection-observer": "^9.16.0"
+    "pnpm": "^10.15.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-image-grid-gallery": "^3.1.2",
+    "react-intersection-observer": "^9.16.0",
+    "saas": "^1.0.0",
+    "sass": "^1.91.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.12",
+    "@types/node": "^20.19.11",
+    "@types/react": "^19.1.11",
+    "@types/react-dom": "^19.1.7",
+    "eslint": "^9.34.0",
     "eslint-config-next": "15.3.2",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "react": "$react",
+      "react-dom": "$react-dom"
+    }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }

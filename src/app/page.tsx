@@ -1,41 +1,9 @@
 import Link from "next/link";
-import { ArrowRightIcon, CheckCircleIcon } from '@heroicons/react/24/solid';
+import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { CubeIcon, WrenchScrewdriverIcon, TruckIcon } from '@heroicons/react/24/outline';
+import Image from "next/image";
 
-const featuredProducts = [
-  {
-    name: 'Teak Wood Cut Sizes',
-    category: 'TEAK',
-    description: 'Premium quality teak wood cut to your exact specifications. Perfect for furniture and construction.',
-    href: '/products/teak-wood',
-    imageSrc: '/images/teak-wood.jpg',
-    features: ['Premium Quality', 'Custom Sizes', 'Seasoned Wood'],
-  },
-  {
-    name: 'Hard Wood Cut Sizes',
-    category: 'HARD',
-    description: 'Durable hardwood varieties for heavy-duty applications and long-lasting projects.',
-    href: '/products/hard-wood',
-    imageSrc: '/images/hard-wood.jpg',
-    features: ['High Durability', 'Multiple Species', 'Precision Cut'],
-  },
-  {
-    name: 'Rough Square',
-    category: 'TEAK AND HARD',
-    description: 'Raw timber in rough square format, ideal for custom milling and specialized projects.',
-    href: '/products/rough-square',
-    imageSrc: '/images/rough-square.jpg',
-    features: ['Raw Material', 'Bulk Available', 'Cost Effective'],
-  },
-  {
-    name: 'Door Frames',
-    category: 'DOORS',
-    description: 'Ready-made door frames crafted with precision for residential and commercial use.',
-    href: '/products/door-frames',
-    imageSrc: '/images/door-frames.jpg',
-    features: ['Ready to Install', 'Standard Sizes', 'Quality Finish'],
-  },
-];
+
 
 const services = [
   {
@@ -66,7 +34,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero section */}
-      <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <div className="relative max-h-screen py-28 flex items-center justify-center overflow-hidden">
         {/* Professional Wood Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 via-stone-800/75 to-stone-700/60 z-10" />
@@ -107,7 +75,7 @@ export default function Home() {
               </p>
             </div>
             
-            <p className="text-lg md:text-xl text-stone-200 max-w-4xl mx-auto mb-12 leading-relaxed opacity-90">
+            <p className="text-sm md:text-lg text-stone-200 max-w-4xl mx-auto mb-8 leading-relaxed opacity-90">
               At Mittal Timbers, we put our customers at the heart of everything we do. We listen 
               and respond to their needs as we constantly strive to provide an intuitive and 
               memorable experience when using our products and interacting with us.
@@ -116,7 +84,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 flex items-center group relative overflow-hidden"
+                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-10 py-3 rounded-xl font-semibold text-md hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 flex items-center group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <span className="relative z-10">CONTACT US</span>
@@ -124,7 +92,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/products"
-                className="border-2 border-white/80 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 flex items-center group hover:border-amber-400"
+                className="border-2 border-white/80 text-white px-10 py-3 rounded-xl font-semibold text-md hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 flex items-center group hover:border-amber-400"
               >
                 <span>VIEW PRODUCTS</span>
                 <ArrowRightIcon className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -192,18 +160,16 @@ export default function Home() {
             </div>
             <div className="animate-fade-in-right">
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-amber-50 via-stone-100 to-amber-100 rounded-3xl shadow-2xl overflow-hidden border border-stone-200">
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/30 via-transparent to-stone-800/10" />
+                <div className="aspect-[4/3] bg-gradient-to-br rounded-3xl shadow-2xl overflow-hidden border border-stone-200">
+                  <div className="absolute inset-0 " />
                   {/* Professional wood texture overlay */}
-                  <div className="absolute inset-0 opacity-20" 
-                       style={{
-                         backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><defs><pattern id="wood" patternUnits="userSpaceOnUse" width="80" height="40"><path d="M0,20 Q20,5 40,20 T80,20" stroke="%23A0522D" stroke-width="0.8" fill="none" opacity="0.6"/><path d="M0,25 Q30,10 60,25 T80,25" stroke="%238B4513" stroke-width="0.5" fill="none" opacity="0.4"/></pattern></defs><rect fill="url(%23wood)" width="400" height="300"/></svg>')`,
-                       }}
-                  />
-                  <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg">
-                    <p className="text-2xl font-bold text-stone-800 mb-1">T Y RAO</p>
-                    <p className="text-amber-600 font-semibold text-sm tracking-wide">(MANAGING DIRECTOR)</p>
+                  <div className="absolute inset-0" >
+                    <img src="/assets/landing-graphics/1@300x.png" alt="Mittal Timbers" className="w-full h-full object-cover" />
                   </div>
+                  {/* <div className="absolute bottom-8 right-8 bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-lg"> */}
+                    {/* <p className="text-2xl font-bold text-stone-800 mb-1">T Y RAO</p> */}
+                    {/* <p className="text-amber-600 font-semibold text-sm tracking-wide">(MANAGING DIRECTOR)</p> */}
+                  {/* </div> */}
                 </div>
                 
                 {/* Floating badge */}
@@ -237,7 +203,7 @@ export default function Home() {
       </div>
 
       {/* Enhanced Products section */}
-      <div className="py-32 bg-gradient-to-br from-white via-stone-50 to-white relative">
+      {/* <div className="py-32 bg-gradient-to-br from-white via-stone-50 to-white relative">
         <div className="absolute inset-0 opacity-5" 
              style={{
                backgroundImage: `url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23D2691E" fill-opacity="0.1"><circle cx="30" cy="30" r="3"/></g></svg>')`,
@@ -262,7 +228,7 @@ export default function Home() {
                 <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-stone-100 hover:border-amber-300 transition-all duration-500 hover:shadow-2xl hover:shadow-amber-500/10 h-full flex flex-col">
                   <div className="aspect-[16/10] bg-gradient-to-br from-stone-100 via-amber-50 to-stone-200 relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-900/50 via-transparent to-transparent" />
-                    {/* Wood texture overlay */}
+   
                     <div className="absolute inset-0 opacity-30" 
                          style={{
                            backgroundImage: `url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"><defs><pattern id="grain" patternUnits="userSpaceOnUse" width="40" height="20"><path d="M0,10 Q10,2 20,10 T40,10" stroke="%23A0522D" stroke-width="0.5" fill="none" opacity="0.8"/></pattern></defs><rect fill="url(%23grain)" width="200" height="120"/></svg>')`,
@@ -305,7 +271,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Enhanced Services section */}
       <div className="py-32 bg-gradient-to-br from-stone-100 via-stone-50 to-stone-100 relative overflow-hidden">
@@ -382,6 +348,153 @@ export default function Home() {
               >
                 View Gallery
               </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Products Section */}
+      <div className="py-24 bg-gradient-to-br from-stone-50 via-white to-stone-50 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5" 
+             style={{
+               backgroundImage: `url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="%23654321"><circle cx="20" cy="20" r="2"/><circle cx="80" cy="80" r="2"/></g></svg>')`,
+             }}
+        />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+          <div className="text-center mb-16 animate-fade-in-up">
+            <div className="inline-flex items-center bg-amber-100 rounded-full px-6 py-2 mb-6">
+              <span className="text-amber-700 font-semibold text-sm tracking-wide">PRODUCT SPECIALIZATIONS</span>
+            </div>
+            <h3 className="text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mb-6">Specialist in NAGPUR TEAK</h3>
+            <p className="text-xl text-stone-600 max-w-4xl mx-auto">PRODUCT DEALING WITH: NAGPUR TEAK • IMPORTED TEAK • SAAL • CHAMP • MERANDI • FENESTA (UPVC AND ALUMINIUM) • VENNER • PLYWOOD - all thickness plywood & flush door</p>
+          </div>
+          
+          {/* Main Specializations */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {[
+              { 
+                name: 'NAGPUR TEAK',
+                description: 'Our Nagpur Teak is a well known name in the Indian market offering premium quality with reliability. High Strength, Termite free, Very beautiful grains in every piece of wood.',
+                image: '/assets/product-graphics/nagpur_teak.jpg',
+                features: ['High Strength', 'Termite free', 'Beautiful grains']
+              },
+              { 
+                name: 'IVORY COAST TEAK',
+                description: 'Premium imported teak with exceptional durability and stunning natural patterns.',
+                image: '/assets/landing-graphics/2@300x.png',
+                features: ['Imported Quality', 'Durable', 'Premium Grade']
+              },
+              { 
+                name: 'PLYWOOD & FLUSH DOORS',
+                description: 'All thickness plywood & flush doors from associated brands: Green, Century, Duro, Merino.',
+                image: '/assets/landing-graphics/3@300x.png',
+                features: ['All Thickness', 'Top Brands', 'Quality Assured']
+              },
+              { 
+                name: 'VENEER COLLECTION',
+                description: 'Wide range of veneer species available for all your decorative and functional needs.',
+                image: '/assets/landing-graphics/4@300x.png',
+                features: ['Wide Range', 'Premium Species', 'Custom Options']
+              },
+              { 
+                name: 'FENESTA UPVC',
+                description: 'Channel partner for FENESTA UPVC & ALUMINIUM doors & windows and premium wooden doors.',
+                image: '/assets/landing-graphics/5@300x.png',
+                features: ['UPVC & Aluminium', 'Premium Doors', 'Windows']
+              },
+              { 
+                name: 'CHAMP & MERANTI',
+                description: 'High-quality CHAMP and MERANTI wood varieties for diverse construction needs.',
+                image: '/assets/product-graphics/product-graphics/22/DSC04710.JPG',
+                features: ['Quality Wood', 'Construction Grade', 'Versatile Use']
+              }
+            ].map((product, index) => (
+              <div key={index} className="bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden group border border-stone-100 hover:border-amber-200 h-full flex flex-col">
+                <div className="relative h-96 overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-fit group-hover:scale-110 transition-transform duration-700 "
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-900/50 to-transparent"></div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <h4 className="text-xl font-bold text-white mb-2">{product.name}</h4>
+                  </div>
+                </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <p className="text-stone-600 mb-3 leading-relaxed flex-1">{product.description}</p>
+                  <div className="space-y-2 mb-3">
+                    {product.features.map((feature, idx) => (
+                      <div key={idx} className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
+                        <span className="text-stone-700 text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <Link 
+                    href="/products" 
+                    className="inline-flex items-center text-amber-600 font-bold hover:text-amber-700 transition-colors group/link mt-auto"
+                  >
+                    Learn More
+                    <svg className="w-4 h-4 ml-2 group-hover/link:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          {/* Associated Brands */}
+          <div className="text-center mb-12">
+            <h4 className="text-2xl font-bold text-stone-800 mb-6">ASSOCIATED BRANDS</h4>
+            <div className="flex flex-wrap justify-center items-center gap-8">
+              {['Green', 'Century', 'Duro', 'Merino'].map((brand) => (
+                <div key={brand} className="bg-white rounded-xl px-6 py-4 shadow-lg border border-stone-200 hover:border-amber-200 transition-colors">
+                  <span className="text-stone-700 font-semibold text-lg">{brand}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          {/* Call to Action */}
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-amber-600 to-amber-700 rounded-2xl p-8 text-white">
+              <h4 className="text-2xl font-bold mb-4">GET BEST DISCOUNT & BEST PRICE</h4>
+              <p className="text-xl mb-6">Share your requirements with us</p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="tel:+919318483152" 
+                  className="bg-white text-amber-700 px-8 py-3 rounded-xl font-bold hover:bg-stone-50 transition-colors"
+                >
+                  SAKSHAM MITTAL : +91 9318483152
+                </a>
+                <a 
+                  href="tel:+919811424164" 
+                  className="bg-white text-amber-700 px-8 py-3 rounded-xl font-bold hover:bg-stone-50 transition-colors"
+                >
+                  RAJESH MITTAL : +91 9811424164
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          {/* Video Reel Section */}
+          <div className="mt-24 text-center">
+            <div className="inline-flex items-center bg-amber-100 rounded-full px-6 py-2 mb-6">
+              <span className="text-amber-700 font-semibold text-sm tracking-wide">WATCH OUR WORK</span>
+            </div>
+            <h3 className="text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mb-6">See Us In Action</h3>
+            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-stone-200 h-[70vh]">
+              <video 
+                controls 
+                className="w-full h-full object-fit"
+                poster="/assets/landing-graphics/1@300x.png"
+              >
+                <source src="/assets/Reels/Reel1.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
