@@ -1,8 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon } from '@heroicons/react/24/solid';
 import { CubeIcon, WrenchScrewdriverIcon, TruckIcon } from '@heroicons/react/24/outline';
-import Image from "next/image";
-
 
 
 const services = [
