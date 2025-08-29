@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero section */}
-      <div className="relative max-h-screen py-28 flex items-center justify-center overflow-hidden">
+      <div className="relative h-full py-28 flex items-center justify-center overflow-hidden">
         {/* Professional Wood Background */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-br from-stone-900/90 via-stone-800/75 to-stone-700/60 z-10" />
@@ -58,7 +58,7 @@ export default function Home() {
               <span className="text-amber-400 font-bold text-sm tracking-wider">SINCE 1995</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-4 tracking-tight leading-tight">
               WHERE <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">WOOD</span>
               <br className="block" />
               MEETS <span className="text-gradient bg-gradient-to-r from-amber-400 via-amber-500 to-amber-600 bg-clip-text text-transparent">LUXURY</span>
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-10 py-3 rounded-xl font-semibold text-md hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 flex items-center group relative overflow-hidden"
+                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white md:px-10 px-8 py-3 rounded-xl font-semibold md:text-md text-sm hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 flex items-center group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <span className="relative z-10">CONTACT US</span>
@@ -90,7 +90,7 @@ export default function Home() {
               </Link>
               <Link
                 href="/products"
-                className="border-2 border-white/80 text-white px-10 py-3 rounded-xl font-semibold text-md hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 flex items-center group hover:border-amber-400"
+                className="border-2 border-white/80 text-white md:px-10 px-5 py-3 rounded-xl font-semibold md:text-md text-sm hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 flex items-center group hover:border-amber-400"
               >
                 <span>VIEW PRODUCTS</span>
                 <ArrowRightIcon className="w-5 h-5 ml-3 group-hover:translate-x-1 transition-transform" />
@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       {/* Enhanced About Section */}
-      <div className="py-32 bg-gradient-to-br from-stone-50 via-white to-stone-50 relative overflow-hidden">
+      <div className="py-12 bg-gradient-to-br from-stone-50 via-white to-stone-50 relative overflow-hidden">
         {/* Subtle background pattern */}
         <div className="absolute inset-0 opacity-5" 
              style={{
@@ -118,15 +118,15 @@ export default function Home() {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div className="animate-fade-in-left">
-              <div className="inline-flex items-center bg-amber-100 rounded-full px-4 py-2 mb-6">
+            <div className="animate-fade-in-left text-center">
+              <div className="inline-flex items-center bg-amber-100 rounded-full px-4 py-2 mb-4 ">
                 <span className="text-amber-700 font-semibold text-sm tracking-wide">ABOUT</span>
               </div>
-              <h3 className="text-5xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mt-2 mb-8 leading-tight">
+              <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mt-2 mb-8 leading-tight">
                 MITTAL TIMBERS
-              </h3>
+              </div>
               <div className="space-y-6 text-stone-600 leading-relaxed text-lg">
-                <p className="text-xl text-stone-700 font-medium mb-6">
+                <p className="text-lg text-stone-700 font-medium mb-6">
                   Mittal Timbers specializes in heavy timbers and custom milling. We are creative, 
                   our sawyers and planers and fabricators can make almost anything out of 
                   wood. We can cut and mill the entire order and package it for you.
@@ -192,7 +192,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={stat.name} className={`text-center animate-fade-in-up animate-delay-${(index + 1) * 100}`}>
-                <div className="text-5xl md:text-6xl font-bold text-white mb-3 drop-shadow-lg">{stat.value}</div>
+                <div className="text-3xl md:text-5xl font-bold text-white mb-3 drop-shadow-lg">{stat.value}</div>
                 <div className="text-amber-100 font-semibold text-sm tracking-wide uppercase">{stat.name}</div>
               </div>
             ))}
@@ -272,7 +272,7 @@ export default function Home() {
       </div> */}
 
       {/* Enhanced Services section */}
-      <div className="py-32 bg-gradient-to-br from-stone-100 via-stone-50 to-stone-100 relative overflow-hidden">
+      <div className="py-12 bg-gradient-to-br from-stone-100 via-stone-50 to-stone-100 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5" 
              style={{
                backgroundImage: `url('data:image/svg+xml,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23A0522D" fill-opacity="0.1"><polygon points="50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40"/></g></svg>')`,
@@ -284,9 +284,9 @@ export default function Home() {
             <div className="inline-flex items-center bg-amber-100 rounded-full px-6 py-2 mb-6">
               <span className="text-amber-700 font-semibold text-sm tracking-wide">OUR</span>
             </div>
-            <h3 className="text-5xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mt-2 mb-8">
+            <div className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-stone-800 to-stone-600 bg-clip-text text-transparent mt-2 mb-8">
               SERVICES
-            </h3>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -312,7 +312,7 @@ export default function Home() {
       </div>
 
       {/* Enhanced CTA Section */}
-      <div className="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 py-24 relative overflow-hidden">
+      <div className="bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900  relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-600/10 via-transparent to-amber-600/10"></div>
         <div className="absolute inset-0 opacity-10" 
              style={{
@@ -320,33 +320,36 @@ export default function Home() {
              }}
         />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 lg:py-0 md:py-5 py-5 text-center relative flex items-center gap-10 md:flex-row flex-col">
           <div className="animate-fade-in-up">
             <div className="inline-flex items-center bg-amber-600/20 backdrop-blur-sm border border-amber-500/30 rounded-full px-6 py-2 mb-8">
               <span className="text-amber-400 font-semibold text-sm tracking-wider">GET STARTED</span>
             </div>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-8 leading-tight">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-8 leading-tight">
               Ready to Start Your <span className="text-gradient bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent">Project?</span>
             </h3>
-            <p className="text-xl text-stone-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-md text-stone-300 mb-12 max-w-3xl mx-auto leading-relaxed">
               Get in touch with our experts today and let us help you find the perfect timber solution for your needs. 
               Experience the difference that quality and craftsmanship can make.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <Link
                 href="/contact"
-                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-12 py-5 rounded-xl font-bold text-lg hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 relative overflow-hidden group"
+                className="bg-gradient-to-r from-amber-600 via-amber-700 to-amber-800 text-white px-5 py-3 rounded-xl font-bold text-md hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-amber-500/30 relative overflow-hidden group"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                 <span className="relative z-10">Get Quote</span>
               </Link>
               <Link
                 href="/gallery"
-                className="border-2 border-white/80 text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 hover:border-amber-400"
+                className="border-2 border-white/80 text-white px-5 py-3 rounded-xl font-bold text-lmd hover:bg-white hover:text-stone-800 backdrop-blur-sm transition-all duration-300 hover:border-amber-400"
               >
                 View Gallery
               </Link>
             </div>
+          </div>
+          <div>
+            <img src="/assets/landing-graphics/4@300x.png" alt="Mittal Timbers" className="md:w-[30vw]  h-full object-cover"/>
           </div>
         </div>
       </div>
