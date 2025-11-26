@@ -14,6 +14,8 @@ const navigation = {
     { name: 'Services', href: '/services' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms & Conditions', href: '/terms' },
   ],
   products: [
     { name: 'Teak Wood Cut Sizes', href: '/products/teak-wood' },
@@ -64,7 +66,13 @@ const navigation = {
   ],
 };
 
-const contactInfo = [
+interface ContactInfoItem {
+  icon: (props: IconProps) => React.ReactNode;
+  label: string;
+  value: string | string[];
+}
+
+const contactInfo: ContactInfoItem[] = [
   {
     icon: PhoneIcon,
     label: 'Phone',
@@ -78,7 +86,17 @@ const contactInfo = [
   {
     icon: MapPinIcon,
     label: 'Address',
-    value: 'Bunglow No. 179, NH-44, Medchal Road, Near Cantonment Check Post, Old Bowenpally, Secunderabad, Telangana, 500011',
+    value: [
+      'Floor No.: GROUND & FIRST FLOOR',
+      'Building No./Flat No.: 36/27',
+      'Road/Street: SIKANDERPUR GHOSI',
+      'Nearby Landmark: SIKANDERPUR RAPID METRO STATION',
+      'Locality/Sub Locality: GURUGRAM',
+      'City/Town/Village: Gurugram',
+      'District: Gurugram',
+      'State: Haryana',
+      'PIN Code: 122001',
+    ],
   },
   {
     icon: ClockIcon,
@@ -184,6 +202,15 @@ export default function Footer() {
             <div className="space-y-4">
               {contactInfo.map((item) => {
                 const Icon = item.icon;
+                const formattedValue = Array.isArray(item.value)
+                  ? item.value.map((line, index) => (
+                      <span key={`${item.label}-${index}`}>
+                        {line}
+                        {index < item.value.length - 1 && <br />}
+                      </span>
+                    ))
+                  : item.value;
+
                 return (
                   <div key={item.label} className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-amber-600/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -191,7 +218,7 @@ export default function Footer() {
                     </div>
                     <div>
                       <p className="text-amber-400 font-medium text-sm">{item.label}</p>
-                      <p className="text-stone-300 text-sm leading-relaxed">{item.value}</p>
+                      <p className="text-stone-300 text-sm leading-relaxed">{formattedValue}</p>
                     </div>
                   </div>
                 );
@@ -204,14 +231,14 @@ export default function Footer() {
         <div className="mt-16 pt-8 border-t border-stone-700">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-stone-400 text-sm">
-              &copy; {new Date().getFullYear()} Mittal Timbers. All rights reserved.
+              ©️ 2025 Mittal Timbers Traders. All rights reserved.
             </p>
             <div className="flex items-center space-x-6 text-sm text-stone-400">
               <Link href="/privacy" className="hover:text-amber-400 transition-colors">
                 Privacy Policy
               </Link>
               <Link href="/terms" className="hover:text-amber-400 transition-colors">
-                Terms of Service
+                Terms &amp; Conditions
               </Link>
               <Link href="/sitemap" className="hover:text-amber-400 transition-colors">
                 Sitemap
